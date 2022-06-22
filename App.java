@@ -99,7 +99,7 @@ public class App {
                     result += times_spins.get(i);
                 }
                 System.out.println("Resultatet efter beräkningen av 180 spel i timmen 50,000 gånger blir, \nmedelvärdet för hur många gånger man kan förlora i timmen är: " + result/(float)times_spins.size() + "\n");
-                System.out.println("Antal de (totala) vinster och förluster under 50,000 gånger blev det: \nVinster: " + win + " gånger" + "\nFörloster: " + lose + " gånger\n");
+                System.out.println("Antal de (totala) vinster och förluster under 50,000 gånger blev det: \nVinster: " + win + " gånger" + "\nFörluster: " + lose + " gånger\n");
                 System.out.println("Vinst: " + (((float)win/(float)(win + lose))*100) + " %\n");
                 System.out.println("\nSpela fram tills du förlorar " + (int)(result/(float)times_spins.size()) + " gånger, detta är ungefär " + (int)((3600/(result/(float)times_spins.size()/2)/60)) + " minuter" + "\nEller " + (int)((3600/(result/(float)times_spins.size()/2))/(3600/antal_i_timme)) + " antal spelomgångar");
                 break;
