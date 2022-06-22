@@ -10,3 +10,6 @@ This tool used to calculate the statistics of the Roulette game. The tool uses d
 3- Write the inputs
 
 4- Get your result
+
+## Questions / Issues
+If you have any question or some updates to the code, open an issue.
