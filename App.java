@@ -6,7 +6,7 @@ public class App {
     static ArrayList<Integer> times_spins = new ArrayList<Integer>();
     static int result = 0;
     static int antal_i_timme = 0;
-    static int min_bet, max_bet, number_of_bets = 0;
+    static int min_bet = 0, max_bet = 0, number_of_bets = 0;
     static int bet, key, win = 0, lose = 0;
     
     
@@ -28,8 +28,17 @@ public class App {
                 antal_i_timme = input.nextInt();
                 System.out.print("Skriv minsta spel summa: ");
                 min_bet = input.nextInt();
+                while(min_bet <= 0){
+                    System.out.print("Skriv en siffra större än 0: ");
+                    min_bet = input.nextInt();
+                }
                 System.out.print("Skriv största spel summa: ");
                 max_bet = input.nextInt();
+                while(max_bet <= 0){
+                    System.out.print("Skriv en siffra större än 0: ");
+                    max_bet = input.nextInt();
+                }
+                
                 
                 bet = min_bet;
                 for(int i = 0;;i++){// Calculate the doubling numbers from min_bet to max_bet
@@ -58,8 +67,16 @@ public class App {
                 antal_i_timme = input.nextInt();
                 System.out.print("Skriv minsta spel summa: ");
                 min_bet = input.nextInt();
+                while(min_bet <= 0){
+                    System.out.print("Skriv en siffra större än 0: ");
+                    min_bet = input.nextInt();
+                }
                 System.out.print("Skriv största spel summa: ");
                 max_bet = input.nextInt();
+                while(max_bet <= 0){
+                    System.out.print("Skriv en siffra större än 0: ");
+                    max_bet = input.nextInt();
+                }
                 bet = min_bet;
                 for(int i = 0;;i++){
                     if((bet*2) <= max_bet){
@@ -90,33 +107,5 @@ public class App {
                 break;
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
-        
-
 }

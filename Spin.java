@@ -7,6 +7,7 @@ public class Spin {
     public int random_number = 0;
     public int black_counter = 0;
     public int times_lost = 0;
+    public int multiplier = 0;
     public ArrayList<Integer>  numbers, red_numbers, black_numbers;
     public int pengar = (int)((Math.pow(2, App.number_of_bets)) * App.min_bet), win_times = 0, lose_times = 0;
     
@@ -31,7 +32,10 @@ public class Spin {
                         black_counter = 0;
                         
                         //------------------------Pengar räkning-----------------------//
-                        pengar -= (int)((Math.pow(2, App.number_of_bets)) * App.min_bet);
+                        for(int j = 0; j < App.number_of_bets + 1; j++){ // 2 to the power of j
+                            multiplier += (int)Math.pow(2, j); //Add all the numbers    
+                        }
+                        pengar -= multiplier * App.min_bet;// And multiply the number to the min_bet
                         //------------------------Pengar räkning-----------------------//
                         
 
@@ -40,8 +44,6 @@ public class Spin {
                     //------------------------Pengar räkning-----------------------//
                     pengar += App.min_bet;
                     //------------------------Pengar räkning-----------------------//
-                    
-
                     black_counter = 0;
                 }
                 if(pengar <=0){
